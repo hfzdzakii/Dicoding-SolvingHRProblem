@@ -1,5 +1,9 @@
 # Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Jaya Jaya Maju
 
+Email Dicoding : muhammadhafizhdzaki@gmail.com
+Username Dicoding : haztsu
+---
+
 ## Business Understanding
 
 Jaya Jaya Maju merupakan salah satu perusahaan multinasional yang telah berdiri sejak tahun 2000. Ia memiliki lebih dari 1000 karyawan yang tersebar di seluruh penjuru negeri. (Fiction Scenario)
