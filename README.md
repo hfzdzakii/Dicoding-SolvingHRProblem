@@ -26,8 +26,12 @@ Setup environment:
 $ conda create --name myenv "python<3.11"
 $ conda activate myenv
 $ pip install -r requirements.txt
-
 ```
+
+`Run semua cell pada file prediction.ipynb`
+
+Hasil deployemnt juga bisa bisa diakses pada link [berikut](https://huggingface.co/spaces/hfzdzakii/EmployeeAttritionPrediction).
+
 
 ## Business Dashboard
 
@@ -42,7 +46,7 @@ $ pip install -r requirements.txt
 
 1. Current Overall Attrition Rate:
 
-    Ratio atrisi di perusahaan saat ini
+    Rasio atrisi di perusahaan saat ini
 
 2. High Risk Employee Leave Count:
 
@@ -73,19 +77,49 @@ $ pip install -r requirements.txt
     - Perusahaan Jaya Jaya Maju merupakan perusahaan yang baik karena tingkat hubungan kerja antarkaryawan yang memuaskan sangat tinggi
     - Secara kuantitas, lebih banyak karyawan yang keluar dari perusahaan karena merasa hubungan kerja yang rendah
 
-    6.1. Low-Medium-High-Very High Satisfaction Attrition Ratio:
+    - Low-Medium-High-Very High Satisfaction Attrition Ratio: Rasio atrisi karyawan dengan kepuasan rendah dari berbagai tingkat kepuasan
 
-    Ratio atrition karyawan dengan kepuasan rendah dari berbagai tingkat kepuasan. 
+    - Dapat dilihat kepuasan "Low" memiliki tingkat atrisi karyawan tertinggi
 
-8. dfs
+7. Environment Satisfaction vs Year with Current Manager - Attrition:
+
+    Visualisasi chart pie antara kepuasan lingkungan dengan tahun bersama manajer untuk karyawan yang keluar dari perusahaan. Bisa dilihat:
+
+    - Terdapat total 179 karyawan yang ingin meninggalkan perusahaan
+
+    - Kebanyakan dari mereka hanya bertahan 0-5 tahun dengan perasaan kepuasan lingkungan yang rendah
+
+8. Environment Satisfaction vs Year with Current Manager - Retained
+
+9. Environment Satisfaction vs Year with Current Manager - No Data
 
 ## Conclusion
 
-Jelaskan konklusi dari proyek yang dikerjakan.
+Projek ini berhasil menentukan faktor yang menyebabkan tingginya rasio atrisi di Perusahaan Jaya Jaya Maju. 
 
-### Rekomendasi Action Items (Optional)
+Tidak asal memilih, semua faktor berasal dari hasil research mandiri dan membaca artikel serta jurnal ilmiah. Fitur yang digunakan untuk prediksi model juga telah dioptimasi menggunakan perhitungan P-Values Hypothesis Testing serta ML model yang dipilih adalah yang terbaik dari hasil experimen.
 
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
+1. Identifikasi faktor yang menyebabkan karyawan pergi dari perusahaan
 
-- action item 1
-- action item 2
+    - Terkait kompensasi : `StokOptionLevel`
+    - Terkait perusahaan : `EnvironmentSatisfaction`, `OverTime`, `JobSatisfaction`, `RelationshipSatisfaction`
+    - Terkait pengembangan karir : `YearsSinceLastPromotion`, `TotalWorkingYears`, `NumCompaniesWorked`, `YearsWithCurrManager`
+
+2. Metabase dashboard
+
+    - haztsu-dashboard-page-1.jpg
+    - haztsu-dashboard-page-2.jpg
+
+3. Gradio deployemnt 
+
+    Bisa diakses lewat [sini](https://huggingface.co/spaces/hfzdzakii/EmployeeAttritionPrediction)
+
+### Rekomendasi Action
+
+1. Minimalisir karyawan untuk bekerja lembur (bila memang tidak benar-benar diperlukan) dan tingkatkan kepuasan berkerja. Sehingga, tingkat atrisi bisa menurun.
+
+2. Berikan opsi kepemilikan saham ke tingkat "Low" dan "Medium" bagi karyawan yang layak mendapat peningkatan. Hindari peningkatan ke "High" untuk mencegah atrisi karyawan.
+
+3. Evaluasi faktor kepuasan hubungan dalam perusahaan. Baik hubungan antarkarywan atau atasan dengan bawahan.
+
+4. Perhatikan karyawan baru (0-5 tahun berkerja) agar mereka bisa beradaptasi dan dimohon untuk manajerial mendukung dan membantu karywan baru agar betah.
